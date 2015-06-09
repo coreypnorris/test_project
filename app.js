@@ -7,16 +7,21 @@ var app = express();
 
 // Environment Configurations
 var path = require('path');
+var expressLayouts = require('express-ejs-layouts');
+
 app.set('view engine', 'ejs');
+app.set('layout', 'layout');
+app.use(expressLayouts);
+
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
-// development
+// Development
 if ('development' == app.get('env')) {
     app.set('dev_env', 'Running in development environment');
 }
 
-// production
+// Production
 if ('production' == app.get('env')) {
     app.set('prod_env', 'Running in production environment');
 }
