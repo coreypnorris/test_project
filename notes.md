@@ -6,5 +6,5 @@
 2. Run the tests in the tests folder with this command
 `node nightwatch.js`
 
--- Switching between different environments
+--- Switching between different environments
 `SET NODE_ENV=development`
