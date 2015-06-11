@@ -9,6 +9,7 @@
   "dependencies": {
     "express": "^4.12.4",
     "express-ejs-layouts": "^1.1.0",
+    "gulp": "^3.9.0",
     "jquery": "^2.1.4",
     "modernizr": "^3.0.0-alpha.4",
     "nightwatch": "^0.6.13",
@@ -17,7 +18,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "java -jar bin\/selenium-server-standalone-2.46.0.jar -Dwebdriver.chrome.driver='C:\/Users\/corey_000\/Documents\/Code\/public_comics\/bin\/chromedriver.exe' &"
+    "test": "java -jar bin/selenium-server-standalone-2.46.0.jar -Dwebdriver.chrome.driver='C:/Users/corey_000/Documents/Code/public_comics/bin/chromedriver.exe' &"
   },
   "author": "",
   "license": "ISC"
