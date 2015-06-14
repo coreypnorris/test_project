@@ -18,3 +18,10 @@ EX: Instead of `nodemon app.js` to start the app use `node-debug nodemon app.js`
 
 --- Switching between different environments
 `SET NODE_ENV=development`
+
+
+
+
+Css to add to the stylesheets folder
+- bootswatch
+- normalize
