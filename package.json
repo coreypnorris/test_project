@@ -7,23 +7,28 @@
     "test": "tests"
   },
   "dependencies": {
+    "bootstrap": "^3.3.4",
     "bootswatch": "^3.3.4",
+    "browserify": "^10.2.4",
     "express": "^4.12.4",
     "express-ejs-layouts": "^1.1.0",
     "jquery": "^2.1.4",
     "nightwatch": "^0.6.13",
     "node-inspector": "^0.10.1",
     "nodemon": "^1.3.7",
-    "normalize.css": "^3.0.3"
+    "normalize.css": "^3.0.3",
+    "uglify-js": "^2.4.23"
   },
   "devDependencies": {
     "jshint": "^2.8.0"
   },
   "scripts": {
     "lint": "jshint . --exclude node_modules",
-    "addScripts": "copy node_modules\\jquery\\dist\\jquery.js public\\scripts",
-    "concatScripts": ""
+    "cleanScripts" : "del /S/q public\\scripts\\*",
+    "bundleScripts": "type node_modules\\jquery\\dist\\jquery.js node_modules\\bootstrap\\dist\\js\\bootstrap.js > public\\scripts\\bundle.js",
+    "minifyScripts": "uglifyjs public\\scripts\\bundle.js -o public\\scripts\\bundle.min.js"
   },
   "author": "",
   "license": "ISC"
 }
+
