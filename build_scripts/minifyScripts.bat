@@ -1,0 +1,1 @@
+uglifyjs public\scripts\bundle.js -o public\scripts\bundle.min.js
