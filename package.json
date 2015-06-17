@@ -26,7 +26,9 @@
     "lint": "jshint . --exclude node_modules",
     "cleanScripts" : "del /S/q public\\scripts\\*",
     "bundleScripts": "type node_modules\\jquery\\dist\\jquery.js node_modules\\bootstrap\\dist\\js\\bootstrap.js > public\\scripts\\bundle.js",
-    "minifyScripts": "uglifyjs public\\scripts\\bundle.js -o public\\scripts\\bundle.min.js"
+    "minifyScripts": "uglifyjs public\\scripts\\bundle.js -o public\\scripts\\bundle.min.js",
+    "start": "node app.js",
+    "build": "npm run cleanScripts && npm run bundleScripts && npm run minifyScripts && npm run start"
   },
   "author": "",
   "license": "ISC"
