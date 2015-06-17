@@ -1,0 +1,1 @@
+uglifycss public\stylesheets\bundle.css > public\stylesheets\bundle.min.css
