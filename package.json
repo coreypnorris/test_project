@@ -30,8 +30,11 @@
     "minifyScripts": "build_scripts\\minifyScripts.bat",
     "bundleStylesheets": "build_scripts\\bundleStylesheets.bat",
     "minifyStylesheets": "build_scripts\\minifyStylesheets.bat",
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "build": "build_scripts\\build.bat",
+    "startSelenium": "build_scripts\\startSelenium.bat",
+    "preTest": "npm run cleanPublic && npm run build && npm run startSelenium && START /B npm run start",
+    "test": "node nightwatch.js",
     "lint": "jshint . --exclude node_modules"
   },
   "author": "",
