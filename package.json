@@ -9,6 +9,8 @@
   "dependencies": {
     "bootstrap": "^3.3.4",
     "bootswatch": "^3.3.4",
+    "bourbon": "^4.2.3",
+    "bourbon-neat": "^1.7.2",
     "browserify": "^10.2.4",
     "express": "^4.12.4",
     "express-ejs-layouts": "^1.1.0",
@@ -28,12 +30,13 @@
     "cleanPublic": "del /S/q public\\scripts\\* public\\stylesheets\\*",
     "bundleScripts": "build_scripts\\bundleScripts.bat",
     "minifyScripts": "build_scripts\\minifyScripts.bat",
+    "compileScss": "build_scripts\\compileScss.bat",
     "bundleStylesheets": "build_scripts\\bundleStylesheets.bat",
     "minifyStylesheets": "build_scripts\\minifyStylesheets.bat",
     "start": "nodemon app.js",
     "build": "build_scripts\\build.bat",
     "startSelenium": "build_scripts\\startSelenium.bat",
-    "preTest": "npm run cleanPublic && npm run build && npm run startSelenium && START /B npm run start",
+    "preTest": "npm run cleanPublic && npm run build && npm run startSelenium",
     "test": "node nightwatch.js",
     "lint": "jshint . --exclude node_modules"
   },

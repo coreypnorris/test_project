@@ -6717,3 +6717,6 @@ a.list-group-item-danger.active:focus {
 .jumbotron h6 {
   color: #fff;
 }
+h1 {
+  font-weight: bolder; }
+

@@ -1,0 +1,1 @@
+node-sass public\scss_files\custom_styles.scss >> public\stylesheets\bundle.css

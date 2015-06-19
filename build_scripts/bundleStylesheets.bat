@@ -1,1 +1,1 @@
-type node_modules\bootswatch\cyborg\bootstrap.css > public\stylesheets\bundle.css
+ type node_modules\bootswatch\cyborg\bootstrap.css >> public\stylesheets\bundle.css && npm run compileScss
