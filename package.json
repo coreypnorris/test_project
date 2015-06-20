@@ -14,6 +14,7 @@
     "browserify": "^10.2.4",
     "express": "^4.12.4",
     "express-ejs-layouts": "^1.1.0",
+    "http-auth": "^2.2.8",
     "jquery": "^2.1.4",
     "nightwatch": "^0.6.13",
     "node-inspector": "^0.10.1",
@@ -33,12 +34,13 @@
     "compileScss": "build_scripts\\compileScss.bat",
     "bundleStylesheets": "build_scripts\\bundleStylesheets.bat",
     "minifyStylesheets": "build_scripts\\minifyStylesheets.bat",
-    "start": "nodemon app.js",
     "build": "build_scripts\\build.bat",
     "startSelenium": "build_scripts\\startSelenium.bat",
     "preTest": "npm run cleanPublic && npm run build && npm run startSelenium",
     "test": "node nightwatch.js",
-    "lint": "jshint . --exclude node_modules"
+    "lint": "jshint . --exclude node_modules",
+    "start": "nodemon app.js",
+    "killAllNode": "taskkill /IM node.exe /F"
   },
   "author": "",
   "license": "ISC"

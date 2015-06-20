@@ -20,8 +20,17 @@ EX: Instead of `nodemon app.js` to start the app use `node-debug nodemon app.js`
 `SET NODE_ENV=development`
 
 
+--- 4 RESTful verbs:
+GET
+POST
+PUT
+DELETE
 
-
-Css to add to the stylesheets folder
-- bootswatch
-- normalize
+--- 7 RESTful actions:
+index
+new
+create
+edit
+update
+show
+destroy
