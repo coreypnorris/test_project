@@ -6,21 +6,31 @@ var express = require('express');
 var app = express();
 
 // Environment Configurations
+require('dotenv').load();
 var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
-var auth = require('http-auth');
-
 app.set('view engine', 'ejs');
 app.set('layout', 'layout');
 app.use(expressLayouts);
-
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
-var basic = auth.basic({
-    realm: "Upload Area.",
-    file: __dirname + "/../data/users.htpasswd" // gevorg:gpass, Sarah:testpass ...
-});
+var basicAuth = require('basic-auth');
+var auth = function (req, res, next) {
+    function unauthorized(res) {
+        res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+        return res.sendStatus(401);
+    }
+    var user = basicAuth(req);
+    if (!user || !user.name || !user.pass) {
+        return unauthorized(res);
+    }
+    if (user.name === process.env.BASIC_AUTH_USERNAME && user.pass === process.env.BASIC_AUTH_PASSWORD) {
+        return next();
+    } else {
+        return unauthorized(res);
+    }
+};
 
 // Development
 if ('development' == app.get('env')) {
@@ -40,7 +50,8 @@ app.get('/', function(req, res) {
 app.get('/home', home.index);
 
 upload = require('./routes/upload.js');
-app.get('/upload', upload.new);
+app.get('/upload', auth, upload.new);
+
 
 // Port
 app.listen(3000);

@@ -18,7 +18,13 @@ EX: Instead of `nodemon app.js` to start the app use `node-debug nodemon app.js`
 
 --- Switching between different environments
 `SET NODE_ENV=development`
+`SET NODE_ENV=production`
 
+
+
+
+app.set('title', 'My App');
+use settings.title in a view
 
 --- 4 RESTful verbs:
 GET

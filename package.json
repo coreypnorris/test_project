@@ -7,11 +7,14 @@
     "test": "tests"
   },
   "dependencies": {
+    "basic-auth": "^1.0.2",
+    "basic-authentication": "^1.5.12",
     "bootstrap": "^3.3.4",
     "bootswatch": "^3.3.4",
     "bourbon": "^4.2.3",
     "bourbon-neat": "^1.7.2",
     "browserify": "^10.2.4",
+    "dotenv": "^1.1.0",
     "express": "^4.12.4",
     "express-ejs-layouts": "^1.1.0",
     "http-auth": "^2.2.8",

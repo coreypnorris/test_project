@@ -3,5 +3,6 @@
  */
 
 exports.new = function(req, res) {
-    res.render('upload_new');
+    res.render('upload_new', 'Authenticated');
 };
+
