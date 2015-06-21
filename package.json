@@ -41,7 +41,7 @@
     "startSelenium": "build_scripts\\startSelenium.bat",
     "preTest": "npm run cleanPublic && npm run build && npm run startSelenium",
     "test": "node nightwatch.js",
-    "lint": "jshint . --exclude node_modules",
+    "lint": "jshint . --exclude",
     "start": "nodemon app.js",
     "killAllNode": "taskkill /IM node.exe /F"
   },
