@@ -4,6 +4,7 @@
 
 var express = require('express');
 var app = express();
+require('ejs');
 
 // Environment Configurations
 require('dotenv').load();
@@ -11,6 +12,7 @@ var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
 app.set('view engine', 'ejs');
 app.set('layout', 'layout');
+
 app.use(expressLayouts);
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -45,7 +47,7 @@ if ('production' == app.get('env')) {
 // Routing
 home = require('./routes/home.js');
 app.get('/', function(req, res) {
-    res.redirect('/home')
+    res.redirect('/home');
 });
 app.get('/home', home.index);
 

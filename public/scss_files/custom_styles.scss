@@ -1,4 +1,9 @@
 $var: bolder;
+
 h1 {
   font-weight: $var;
+}
+
+body {
+  background-image: url("../images/black_lozenge.png");
 }
