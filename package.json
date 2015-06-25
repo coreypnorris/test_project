@@ -29,7 +29,8 @@
     "uglifycss": "0.0.15"
   },
   "devDependencies": {
-    "jshint": "^2.8.0"
+    "jshint": "^2.8.0",
+    "node-bourbon": "^4.2.3"
   },
   "scripts": {
     "cleanScriptsAndStylesheets": "del /S/q public\\scripts\\* public\\stylesheets\\*",
@@ -38,12 +39,13 @@
     "compileScss": "build_scripts\\compileScss.bat",
     "bundleStylesheets": "build_scripts\\bundleStylesheets.bat",
     "minifyStylesheets": "build_scripts\\minifyStylesheets.bat",
+    "preBuild": "npm run killAllNode",
     "build": "build_scripts\\build.bat",
     "startSelenium": "build_scripts\\startSelenium.bat",
     "preTest": "npm run cleanScriptsAndStylesheets && npm run build && npm run startSelenium",
     "test": "node nightwatch.js",
     "lint": "jshint .",
-    "start": "npm run build && nodemon app.js",
+    "start": "nodemon app.js",
     "killAllNode": "taskkill /IM node.exe /F"
   },
   "author": "",

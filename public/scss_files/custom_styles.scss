@@ -1,9 +1,6 @@
-$var: bolder;
-
-h1 {
-  font-weight: $var;
-}
+@import "./node_modules/bourbon/app/assets/stylesheets/bourbon";
+$black_lozenge_background_path: "../images/black_lozenge.png";
 
 body {
-  background-image: url("../images/black_lozenge.png");
+  @include background-image(url($black_lozenge_background_path));
 }

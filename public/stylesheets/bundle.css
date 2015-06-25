@@ -6937,9 +6937,7 @@ a.list-group-item-danger.active:focus {
 .jumbotron h6 {
   color: #fff;
 }
-h1 {
-  font-weight: bolder; }
-
 body {
+  background-image: url("../images/black_lozenge.png");
   background-image: url("../images/black_lozenge.png"); }
 
