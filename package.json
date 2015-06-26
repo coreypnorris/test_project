@@ -46,7 +46,8 @@
     "test": "node nightwatch.js",
     "lint": "jshint .",
     "start": "nodemon app.js",
-    "killAllNode": "taskkill /IM node.exe /F"
+    "kill": "taskkill /IM node.exe /F",
+    "reStart": "npm run build && npm run start"
   },
   "author": "",
   "license": "ISC"

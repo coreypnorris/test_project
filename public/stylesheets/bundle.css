@@ -6937,7 +6937,24 @@ a.list-group-item-danger.active:focus {
 .jumbotron h6 {
   color: #fff;
 }
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
 body {
   background-image: url("../images/black_lozenge.png");
   background-image: url("../images/black_lozenge.png"); }
+
+.carousel-section {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+  .carousel-section::after {
+    clear: both;
+    content: "";
+    display: table; }
 
