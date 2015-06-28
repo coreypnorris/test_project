@@ -1,5 +1,25 @@
 <section class="home-index-section">
-    <div class="carousel-row">
-
+    <div class="carousel-row well">
+        <div class="carousel-column">
+            <div class="home-page-carousel">
+                <img src="images/carousel_1.jpg" class="home-page-carousel-image">
+                <img src="images/carousel_2.jpg" class="home-page-carousel-image">
+                <img src="images/carousel_3.jpg" class="home-page-carousel-image">
+                <img src="images/carousel_4.jpg" class="home-page-carousel-image">
+                <img src="images/carousel_5.jpg" class="home-page-carousel-image">
+            </div>
+        </div>
+        <div>
+            <h2 class="carousel-welcome-text">Read vintage comics from the public domain.</h2>
+        </div>
     </div>
 </section>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.home-page-carousel').slick({
+            arrows: false,
+            dots: true
+        });
+    });
+</script>

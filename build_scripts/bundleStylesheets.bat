@@ -1,1 +1,1 @@
- type node_modules\bootswatch\cyborg\bootstrap.css >> public\stylesheets\bundle.css && npm run compileScss
+ type node_modules\bootswatch\cyborg\bootstrap.css node_modules\slick-carousel\slick\slick.css node_modules\slick-carousel\slick\slick-theme.css >> public\stylesheets\bundle.css && npm run compileScss

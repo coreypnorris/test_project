@@ -2,12 +2,37 @@
 @import "./node_modules/bourbon-neat/app/assets/stylesheets/_neat";
 
 $black_lozenge_background_path: "../images/black_lozenge.png";
+$txture_background_path: "../images/txture.png";
+$bootswatch_blue: #2a9fd6;
 
 body {
-  @include background-image(url($black_lozenge_background_path));
-  @include outer-container(70%);
+  @include background-image(url($txture_background_path));
+  @include outer-container(60%);
 }
 
 .carousel-row {
   @include span-columns(12);
+  margin-top: 10px;
+
+  .carousel-column {
+    @include span-columns(8 of 12)
+  }
+  .carousel-welcome-text-column {
+    @include span-columns(4 of 12)
+  }
 }
+
+.carousel-welcome-text {
+  text-align: center;
+  margin-top: 0;
+}
+
+.slick-dots li button:before {
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $bootswatch_blue;
+}
+
