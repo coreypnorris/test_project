@@ -1,1 +1,0 @@
-START /B java -jar bin\selenium-server-standalone-2.46.0.jar -Dwebdriver.chrome.driver="C:\Users\corey_000\Documents\Code\public_comics\bin\chromedriver.exe"

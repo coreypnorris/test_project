@@ -23,6 +23,7 @@
     "node-sass": "^3.2.0",
     "nodemon": "^1.3.7",
     "normalize.css": "^3.0.3",
+    "protractor": "^2.1.0",
     "slick-carousel": "^1.5.5",
     "uglify-js": "^2.4.23",
     "uglifycss": "0.0.15"
@@ -40,12 +41,10 @@
     "minifyStylesheets": "build_scripts\\minifyStylesheets.bat",
     "preBuild": "npm run killAllNode",
     "build": "build_scripts\\build.bat",
-    "startSelenium": "build_scripts\\startSelenium.bat",
-    "preTest": "npm run cleanScriptsAndStylesheets && npm run build && npm run startSelenium",
-    "test": "node nightwatch.js",
+    "test": "protractor protractor_config.js",
     "lint": "jshint .",
     "start": "nodemon app.js",
-    "kill": "taskkill /IM node.exe /F",
+    "killAllNode": "taskkill /IM node.exe /F",
     "reStart": "npm run build && npm run start"
   },
   "author": "",
