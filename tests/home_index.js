@@ -1,12 +1,3 @@
-//module.exports = {
-//    'Homepage Carousel' : function(browser) {
-//        browser
-//            .url('http://localhost:3000')
-//            .waitForElementVisible('slick-track', 1000000)
-//            .assert.element("img[data-slick-index=0] .slick-active")
-//            .end();
-//    }
-//};
 var elementHasClass = function (element, elementClass) {
     return element.getAttribute('class').then(function (classes) {
         return classes.split(' ').indexOf(elementClass) !== -1;
@@ -15,8 +6,9 @@ var elementHasClass = function (element, elementClass) {
 
 var getCarouselImages = function(){
     var imagesArray = [];
-    for (var i = 1; i <= 5; ++i)
-        imagesArray.push(browser.driver.findElement(by.className('home-page-carousel-image-' + i)))
+    for (var i = 1; i <= 5; ++i) {
+        imagesArray.push(browser.driver.findElement(by.className('home-page-carousel-image-' + i)));
+    }
     return imagesArray;
 };
 
