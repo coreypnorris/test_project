@@ -10,17 +10,29 @@ body {
   @include outer-container(55%);
 }
 
-.carousel-row {
-  @include span-columns(12);
-  margin-top: 10px;
+.home-index-page {
+  .carousel-row {
+    @include span-columns(12);
+    margin-top: 10px;
 
-  .carousel-column {
-    @include span-columns(8 of 12)
+    .carousel-column {
+      @include span-columns(8 of 12)
+    }
+    .carousel-welcome-text-column {
+      @include span-columns(4 of 12)
+    }
   }
-  .carousel-welcome-text-column {
-    @include span-columns(4 of 12)
+
+  .footer-row {
+    @include span-columns(12);
+    text-align: center;
+
+    .email-link-h6-wrapper, .twitter-link-h6-wrapper {
+      display: inline-block;
+    }
   }
 }
+
 
 .carousel-welcome-text {
   text-align: center;

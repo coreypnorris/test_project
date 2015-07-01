@@ -7272,28 +7272,39 @@ body {
     content: "";
     display: table; }
 
-.carousel-row {
+.home-index-page .carousel-row {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
   margin-top: 10px; }
-  .carousel-row:last-child {
+  .home-index-page .carousel-row:last-child {
     margin-right: 0; }
-  .carousel-row .carousel-column {
+  .home-index-page .carousel-row .carousel-column {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    .carousel-row .carousel-column:last-child {
+    .home-index-page .carousel-row .carousel-column:last-child {
       margin-right: 0; }
-  .carousel-row .carousel-welcome-text-column {
+  .home-index-page .carousel-row .carousel-welcome-text-column {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    .carousel-row .carousel-welcome-text-column:last-child {
+    .home-index-page .carousel-row .carousel-welcome-text-column:last-child {
       margin-right: 0; }
+
+.home-index-page .footer-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center; }
+  .home-index-page .footer-row:last-child {
+    margin-right: 0; }
+  .home-index-page .footer-row .email-link-h6-wrapper, .home-index-page .footer-row .twitter-link-h6-wrapper {
+    display: inline-block; }
 
 .carousel-welcome-text {
   text-align: center;

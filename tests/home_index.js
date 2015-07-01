@@ -25,7 +25,7 @@ describe('home_index page', function() {
         var welcomeText = browser.driver.findElement(by.className('carousel-welcome-text'));
         expect(welcomeText.getText()).toEqual('Read vintage comics from the public domain.');
     });
-    it('should have an interactive carousel with 5 images.', function() {
+    it('should have an interactive carousel with images.', function() {
         browser.driver.get('http://localhost:3000');
         browser.driver.sleep(5000);
         var carouselImages = getCarouselImages();
