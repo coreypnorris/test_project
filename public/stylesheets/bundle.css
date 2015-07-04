@@ -7295,6 +7295,30 @@ body {
     .home-index-page .carousel-row .carousel-welcome-text-column:last-child {
       margin-right: 0; }
 
+.home-index-page .hr-tag-1 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .home-index-page .hr-tag-1:last-child {
+    margin-right: 0; }
+
+.home-index-page .comic-card-1-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .home-index-page .comic-card-1-row:last-child {
+    margin-right: 0; }
+
+.home-index-page .hr-tag-2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .home-index-page .hr-tag-2:last-child {
+    margin-right: 0; }
+
 .home-index-page .footer-row {
   float: left;
   display: block;

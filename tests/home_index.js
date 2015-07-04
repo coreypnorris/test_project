@@ -15,7 +15,7 @@ var getCarouselImages = function(){
 var getSlickDotButtons = function(){
   var buttonsArray = [];
     for (var i = 1; i <= 5; ++i)
-        buttonsArray.push(browser.driver.findElement(by.className('slick-dot-' + i)))
+        buttonsArray.push(browser.driver.findElement(by.className('slick-dot-' + i)));
     return buttonsArray;
 };
 
@@ -35,5 +35,5 @@ describe('home_index page', function() {
         browser.driver.sleep(5000);
         expect(elementHasClass(carouselImages[0], 'slick-active')).toEqual(false);
         expect(elementHasClass(carouselImages[1], 'slick-active')).toEqual(true);
-    })
+    });
 });

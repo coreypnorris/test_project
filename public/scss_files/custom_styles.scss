@@ -23,6 +23,18 @@ body {
     }
   }
 
+  .hr-tag-1 {
+    @include span-columns(12);
+  }
+
+  .comic-card-1-row {
+    @include span-columns(12);
+  }
+
+  .hr-tag-2 {
+    @include span-columns(12);
+  }
+
   .footer-row {
     @include span-columns(12);
     text-align: center;

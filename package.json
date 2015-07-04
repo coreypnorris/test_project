@@ -2,7 +2,7 @@
   "name": "public_comics",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "directories": {
     "test": "tests"
   },
@@ -43,7 +43,7 @@
     "build": "build_scripts\\build.bat",
     "test": "protractor protractor_config.js",
     "lint": "jshint .",
-    "start": "nodemon app.js",
+    "start": "nodemon server.js",
     "killAllNode": "taskkill /IM node.exe /F",
     "reStart": "npm run build && npm run start"
   },
