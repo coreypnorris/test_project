@@ -41,9 +41,9 @@
     "minifyStylesheets": "build_scripts\\minifyStylesheets.bat",
     "preBuild": "npm run killAllNode",
     "build": "build_scripts\\build.bat",
-    "test": "protractor protractor_config.js",
     "lint": "jshint .",
     "start": "nodemon server.js",
+    "runAllTests": "protractor protractor_config.js",
     "killAllNode": "taskkill /IM node.exe /F",
     "reStart": "npm run build && npm run start"
   },
