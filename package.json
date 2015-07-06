@@ -43,9 +43,9 @@
     "build": "build_scripts\\build.bat",
     "lint": "jshint .",
     "start": "nodemon server.js",
+    "reStart": "npm run build && npm run start",
     "runAllTests": "protractor protractor_config.js",
-    "killAllNode": "taskkill /IM node.exe /F",
-    "reStart": "npm run build && npm run start"
+    "killAllNode": "taskkill /IM node.exe /F"
   },
   "author": "",
   "license": "ISC"
