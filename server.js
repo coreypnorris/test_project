@@ -21,6 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Development
 if ('development' == app.get('env')) {
     app.set('dev_env', 'Running in development environment');
+    var dev_db = require('./db/dev_db.js')
+    dev_db.createDatabase
 }
 
 // Production
