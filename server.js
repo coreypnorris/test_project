@@ -19,15 +19,13 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Development
-if ('development' == app.get('env')) {
-    app.set('dev_env', 'Running in development environment');
-    var dev_db = require('./db/dev_db.js')
-    dev_db.createDatabase
+if (process.env.ENVIRONMENT == 'dev') {
+    console.log("Running in development environment");
 }
 
 // Production
-if ('production' == app.get('env')) {
-    app.set('prod_env', 'Running in production environment');
+if (process.env.ENVIRONMENT == 'prod') {
+    console.log("Running in production environment");
 }
 
 // Routing
@@ -40,5 +38,5 @@ app.get('/home', home.index);
 app.get('/upload', utilities.basicAuth, upload.new);
 
 // Port
-app.listen(3000);
-console.log("App listening on port 3000.");
+app.listen(8080);
+console.log("App listening on port 8080.");
