@@ -3,13 +3,15 @@
  */
 
 require('dotenv').load();
-
 var express = require('express');
 var app = express();
+var fs = require('fs');
 var utilities = require('./utilities.js');
 
-// Environment Configurations
 
+
+// Environment Configurations
+utilities.initializeSass();
 var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
 app.set('view engine', 'ejs');
@@ -18,24 +20,44 @@ app.use(expressLayouts);
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Development
 if (process.env.ENVIRONMENT == 'dev') {
-    console.log("Running in development environment");
+  app.set('dev_env', 'Running in development environment');
+  console.log("Running in development environment");
+}
+else if (process.env.ENVIRONMENT == 'prod') {
+  app.set('prod_env', 'Running in prod environment');
+  console.log("Running in production environment");
 }
 
-// Production
-if (process.env.ENVIRONMENT == 'prod') {
-    console.log("Running in production environment");
-}
 
-// Routing
+
+// Database Setup
+var sqlite_interface = require('./db/sqlite_interface.js');
+app.set('sqlite_interface', sqlite_interface);
+var db = sqlite_interface.getDatabase();
+var schema = fs.readFileSync('./schema.sql').toString();
+sqlite_interface.createSchema(db, schema);
+
+
+
+// Routing //
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+// Home routes
 home = require('./routes/home.js');
-upload = require('./routes/upload.js');
 app.get('/', function(req, res) {
     res.redirect('/home');
 });
 app.get('/home', home.index);
-app.get('/upload', utilities.basicAuth, upload.new);
+
+// Comic routes
+comics = require('./routes/comics.js');
+app.get('/comics/new', utilities.basicAuth, comics.new);
+app.post('/comics/create', utilities.basicAuth, comics.create);
+app.get('/comics/edit', utilities.basicAuth, comics.edit);
+
 
 // Port
 app.listen(8080);

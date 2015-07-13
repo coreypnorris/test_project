@@ -1,15 +1,26 @@
 var sass    = require('node-sass');
 var bourbon = require('node-bourbon');
-sass.render({
-    file: './application.scss',
-    success: function(css){
-        console.log(css);
-    },
-    error: function(error) {
-        console.log(error);
-    },
-    includePaths: bourbon.with('./public/scss_files/custom_styles.scss')
-});
+
+var initializeSass = function() {
+  sass.render({
+      file: './application.scss',
+      success: function(css){
+          console.log(css);
+      },
+      error: function(error) {
+          console.log(error);
+      },
+      includePaths: bourbon.with('./public/scss_files/custom_styles.scss')
+  });
+};
+
+var timeNowInUnix = function() {
+  return new Date().valueOf()
+};
+
+module.exports.initializeSass = initializeSass;
+module.exports.timeNowInUnix = timeNowInUnix;
+
 
 var basicAuth = require('basic-auth');
 exports.basicAuth = function (req, res, next) {
