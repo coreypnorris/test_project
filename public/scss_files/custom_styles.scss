@@ -11,51 +11,90 @@ body {
 }
 
 .home-index-page {
-  .carousel-row {
+  .home-index-header-row {
+    @include span-columns(12 of 12);
+    margin-top: 15px;
+
+    .home-index-header-text-row {
+      @include span-columns(12 of 12);
+      text-align: center;
+      margin-bottom: 10px;
+
+      .home-index-header-text {
+        font-family: 'GlacialIndifferenceRegular';
+      }
+    }
+
+    .home-index-search-row {
+      @include span-columns(9 of 12);
+      @include shift(3);
+      text-align: center;
+
+      .home-index-search-bar {
+        width: 75%;
+      }
+    }
+  }
+
+  .home-index-hr-tag-1, .home-index-hr-tag-2, .home-index-hr-tag-3 {
+    @include span-columns(12);
+  }
+
+  .home-index-carousel-row {
     @include span-columns(12);
     margin-top: 10px;
 
-    .carousel-column {
-      @include span-columns(8 of 12)
-    }
-    .carousel-welcome-text-column {
-      @include span-columns(4 of 12)
+    .home-index-carousel-wrapper {
+      @include span-columns(12 of 12);
+      text-align: center;
     }
   }
 
-  .hr-tag-1 {
+  .home-index-comic-card-row-1 {
     @include span-columns(12);
   }
 
-  .comic-card-1-row {
-    @include span-columns(12);
-  }
-
-  .hr-tag-2 {
-    @include span-columns(12);
-  }
-
-  .footer-row {
+  .home-index-footer-row {
     @include span-columns(12);
     text-align: center;
 
-    .email-link-h6-wrapper, .twitter-link-h6-wrapper {
+    .home-index-email-link-wrapper, .home-index-twitter-link-wrapper {
       display: inline-block;
     }
+  }
+
+  .slick-dots li button:before {
+    font-size: 25px;
+    color: whitesmoke;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: $bootswatch_blue;
+  }
+
+  .slick-slide {
+    width: 250px;
   }
 }
 
 
-.carousel-welcome-text {
-  text-align: center;
-  margin-top: 0;
-}
+.comics-new-page {
+  .comics-new-header-row {
+    @include span-columns(12 of 12);
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'GlacialIndifferenceRegular';
+  }
 
-.slick-dots li button:before {
-  font-size: 25px;
-  color: whitesmoke;
-}
+  .comics-new-hr-tag-1 {
+    @include span-columns(12);
+  }
 
-.slick-dots li.slick-active button:before {
-  color: $bootswatch_blue;
+  .comics-new-upload-row {
+    @include span-columns(12);
+
+    .comics-new-upload-title-col {
+      @include span-columns(6 of 12);
+    }
+  }
 }

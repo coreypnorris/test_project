@@ -7052,6 +7052,9 @@ a.list-group-item-danger.active:focus {
     height: auto;
 
     border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
 }@charset 'UTF-8';
 /* Slider */
 .slick-loading .slick-list
@@ -7272,72 +7275,122 @@ body {
     content: "";
     display: table; }
 
-.home-index-page .carousel-row {
+.home-index-page .home-index-header-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 15px; }
+  .home-index-page .home-index-header-row:last-child {
+    margin-right: 0; }
+  .home-index-page .home-index-header-row .home-index-header-text-row {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px; }
+    .home-index-page .home-index-header-row .home-index-header-text-row:last-child {
+      margin-right: 0; }
+    .home-index-page .home-index-header-row .home-index-header-text-row .home-index-header-text {
+      font-family: 'GlacialIndifferenceRegular'; }
+  .home-index-page .home-index-header-row .home-index-search-row {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-left: 25.58941%;
+    text-align: center; }
+    .home-index-page .home-index-header-row .home-index-search-row:last-child {
+      margin-right: 0; }
+    .home-index-page .home-index-header-row .home-index-search-row .home-index-search-bar {
+      width: 75%; }
+
+.home-index-page .home-index-hr-tag-1, .home-index-page .home-index-hr-tag-2, .home-index-page .home-index-hr-tag-3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .home-index-page .home-index-hr-tag-1:last-child, .home-index-page .home-index-hr-tag-2:last-child, .home-index-page .home-index-hr-tag-3:last-child {
+    margin-right: 0; }
+
+.home-index-page .home-index-carousel-row {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
   margin-top: 10px; }
-  .home-index-page .carousel-row:last-child {
+  .home-index-page .home-index-carousel-row:last-child {
     margin-right: 0; }
-  .home-index-page .carousel-row .carousel-column {
+  .home-index-page .home-index-carousel-row .home-index-carousel-wrapper {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%; }
-    .home-index-page .carousel-row .carousel-column:last-child {
-      margin-right: 0; }
-  .home-index-page .carousel-row .carousel-welcome-text-column {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    .home-index-page .carousel-row .carousel-welcome-text-column:last-child {
+    width: 100%;
+    text-align: center; }
+    .home-index-page .home-index-carousel-row .home-index-carousel-wrapper:last-child {
       margin-right: 0; }
 
-.home-index-page .hr-tag-1 {
+.home-index-page .home-index-comic-card-row-1 {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  .home-index-page .hr-tag-1:last-child {
+  .home-index-page .home-index-comic-card-row-1:last-child {
     margin-right: 0; }
 
-.home-index-page .comic-card-1-row {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .home-index-page .comic-card-1-row:last-child {
-    margin-right: 0; }
-
-.home-index-page .hr-tag-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .home-index-page .hr-tag-2:last-child {
-    margin-right: 0; }
-
-.home-index-page .footer-row {
+.home-index-page .home-index-footer-row {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
   text-align: center; }
-  .home-index-page .footer-row:last-child {
+  .home-index-page .home-index-footer-row:last-child {
     margin-right: 0; }
-  .home-index-page .footer-row .email-link-h6-wrapper, .home-index-page .footer-row .twitter-link-h6-wrapper {
+  .home-index-page .home-index-footer-row .home-index-email-link-wrapper, .home-index-page .home-index-footer-row .home-index-twitter-link-wrapper {
     display: inline-block; }
 
-.carousel-welcome-text {
-  text-align: center;
-  margin-top: 0; }
-
-.slick-dots li button:before {
+.home-index-page .slick-dots li button:before {
   font-size: 25px;
   color: whitesmoke; }
 
-.slick-dots li.slick-active button:before {
+.home-index-page .slick-dots li.slick-active button:before {
   color: #2a9fd6; }
+
+.home-index-page .slick-slide {
+  width: 250px; }
+
+.comics-new-page .comics-new-header-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+  font-family: 'GlacialIndifferenceRegular'; }
+  .comics-new-page .comics-new-header-row:last-child {
+    margin-right: 0; }
+
+.comics-new-page .comics-new-hr-tag-1 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .comics-new-page .comics-new-hr-tag-1:last-child {
+    margin-right: 0; }
+
+.comics-new-page .comics-new-upload-row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .comics-new-page .comics-new-upload-row:last-child {
+    margin-right: 0; }
+  .comics-new-page .comics-new-upload-row .comics-new-upload-title-col {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-title-col:last-child {
+      margin-right: 0; }
 

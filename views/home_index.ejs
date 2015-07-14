@@ -1,48 +1,54 @@
 <div class="home-index-page">
-    <section>
-        <div class="carousel-row well">
-            <div class="carousel-column">
-                <div class="home-page-carousel">
-                    <img src="images/carousel_1.jpg" class="home-page-carousel-image home-page-carousel-image-1">
-                    <img src="images/carousel_2.jpg" class="home-page-carousel-image home-page-carousel-image-2">
-                    <img src="images/carousel_3.jpg" class="home-page-carousel-image home-page-carousel-image-3">
-                    <img src="images/carousel_4.jpg" class="home-page-carousel-image home-page-carousel-image-4">
-                    <img src="images/carousel_5.jpg" class="home-page-carousel-image home-page-carousel-image-5">
-                </div>
-            </div>
-            <div>
-                <h2 class="carousel-welcome-text">Read vintage comics from the public domain.</h2>
-            </div>
-        </div>
-    </section>
-
-    <hr class="hr-tag-1">
-
-    <section>
-        <div class="comic-card-1-row">
-            <div class="well">
-                <p>comic card</p>
-            </div>
-        </div>
-    </section>
-
-    <hr class="hr-tag-2">
-
-    <footer>
-        <div class="footer-row">
-            <h6 class="email-link-h6-wrapper"><a href="/">contact@public-comics.com</a></h6>
-            <span class="pipe">|</span>
-            <h6 class="twitter-link-h6-wrapper"><a href="/">twitter.com/public-comics</a></h6>
-        </div>
-    </footer>
+  <section>
+    <div class="home-index-header-row">
+      <div class="home-index-header-text-row">
+        <h2 class="home-index-header-text">Read vintage comics from the public domain.</h2>
+      </div>
+      <div class="home-index-search-row">
+        <form class="form-group" action="/search" method="get">
+          <input class="home-index-search-bar form-control" type="text" name="home-index-search-bar" placeholder="Search by title, tag, or issue number."/>
+        </form>
+      </div>
+    </div>
+  </section>
+  <hr class="home-index-hr-tag-1">
+  <section>
+      <div class="home-index-carousel-row well">
+          <div class="home-index-carousel-wrapper">
+              <img src="images/carousel_1.jpg" class="home-index-carousel-image home-index-carousel-image-1">
+              <img src="images/carousel_2.jpg" class="home-index-carousel-image home-index-carousel-image-2">
+              <img src="images/carousel_3.jpg" class="home-index-carousel-image home-index-carousel-image-3">
+              <img src="images/carousel_4.jpg" class="home-index-carousel-image home-index-carousel-image-4">
+              <img src="images/carousel_5.jpg" class="home-index-carousel-image home-index-carousel-image-5">
+          </div>
+      </div>
+  </section>
+  <hr class="home-index-hr-tag-2">
+  <section>
+      <div class="home-index-comic-card-row-1">
+          <div class="well">
+              <p>comic card</p>
+          </div>
+      </div>
+  </section>
+  <hr class="home-index-hr-tag-3">
+  <footer>
+      <div class="home-index-footer-row">
+          <h6 class="home-index-email-link-wrapper"><a href="/">contact@public-comics.com</a></h6>
+          <span class="pipe">|</span>
+          <h6 class="home-index-twitter-link-wrapper"><a href="/">twitter.com/public-comics</a></h6>
+      </div>
+  </footer>
 </div>
 
 
 <script type="text/javascript">
     function initializeSlickCarousel(){
-        $('.home-page-carousel').slick({
-            arrows: false,
-            dots: true
+        $('.home-index-carousel-wrapper').slick({
+          fade: true,
+          cssEase: 'linear',
+          arrows: false,
+          dots: true
         });
     }
     function addIdentifyingClassesToSlickDots(slickDots){

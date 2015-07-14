@@ -22,7 +22,7 @@ var getSlickDotButtons = function(){
 describe('home_index page', function() {
     it('should have welcome text.', function() {
         browser.driver.get('http://localhost:8080');
-        var welcomeText = browser.driver.findElement(by.className('carousel-welcome-text'));
+        var welcomeText = browser.driver.findElement(by.className('home-index-welcome-text'));
         expect(welcomeText.getText()).toEqual('Read vintage comics from the public domain.');
     });
     it('should have an interactive carousel with images.', function() {

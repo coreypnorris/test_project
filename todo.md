@@ -1,0 +1,3 @@
+- Finish comic_new form.
+- Start on searchbar.
+- Fix carousel variable widths.

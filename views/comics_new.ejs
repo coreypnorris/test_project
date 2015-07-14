@@ -1,9 +1,30 @@
-<h1>Upload a new comic</h1>
+<div class="comics-new-page">
+  <section>
+    <div class="comics-new-header-row">
+      <h2 class="comics-new-header-text">Upload a new comic.</h2>
+    </div>
+  </section>
+  <hr class="comics-new-hr-tag-1">
+  <section>
+    <div class="comics-new-upload-row well">
+      <form action="/comics/create" method="POST">
+        <div class="comics-new-upload-title-col">
+          <input class="comics-new-title-input form-control" type="text" name="titleName" placeholder="Title:"/>
+        </div>
 
-<form action="/comics/create" method="POST">
-<span>Title Name</span>
-<br>
-<input type="text" name="titleName" placeholder="(Action Comics, Detective Comics, etc...)">
-<br><br>
-<input type="submit" value="Submit">
-</form>
+        
+        <br><br><br><br><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+</div>
+
+
+
+
+<div class="comics-new-search-row">
+  <form class="form-group" action="/search" method="get">
+
+  </form>
+</div>
