@@ -7295,11 +7295,11 @@ body {
     .home-index-page .home-index-header-row .home-index-header-text-row .home-index-header-text {
       font-family: 'GlacialIndifferenceRegular'; }
   .home-index-page .home-index-header-row .home-index-search-row {
+    margin-left: 25.58941%;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%;
-    margin-left: 25.58941%;
     text-align: center; }
     .home-index-page .home-index-header-row .home-index-search-row:last-child {
       margin-right: 0; }
@@ -7386,11 +7386,60 @@ body {
   width: 100%; }
   .comics-new-page .comics-new-upload-row:last-child {
     margin-right: 0; }
-  .comics-new-page .comics-new-upload-row .comics-new-upload-title-col {
+  .comics-new-page .comics-new-upload-row .comics-new-upload-form-label-row {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
-    .comics-new-page .comics-new-upload-row .comics-new-upload-title-col:last-child {
+    width: 100%; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-form-label-row:last-child {
       margin-right: 0; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-form-label-row .comics-new-title-name-label {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .comics-new-page .comics-new-upload-row .comics-new-upload-form-label-row .comics-new-title-name-label:last-child {
+        margin-right: 0; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-form-label-row .comics-new-issue-number-label {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      .comics-new-page .comics-new-upload-row .comics-new-upload-form-label-row .comics-new-issue-number-label:last-child {
+        margin-right: 0; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-form-label-row .comics-new-issue-pages-label {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .comics-new-page .comics-new-upload-row .comics-new-upload-form-label-row .comics-new-issue-pages-label:last-child {
+        margin-right: 0; }
+  .comics-new-page .comics-new-upload-row .comics-new-upload-form-row {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-form-row:last-child {
+      margin-right: 0; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-form-row .comics-new-title-name-input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .comics-new-page .comics-new-upload-row .comics-new-upload-form-row .comics-new-title-name-input:last-child {
+        margin-right: 0; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-form-row .comics-new-issue-number-input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      .comics-new-page .comics-new-upload-row .comics-new-upload-form-row .comics-new-issue-number-input:last-child {
+        margin-right: 0; }
+    .comics-new-page .comics-new-upload-row .comics-new-upload-form-row .comics-new-issue-pages-input {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .comics-new-page .comics-new-upload-row .comics-new-upload-form-row .comics-new-issue-pages-input:last-child {
+        margin-right: 0; }
 

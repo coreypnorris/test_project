@@ -1,3 +1,4 @@
 - Finish comic_new form.
+  - Refactor inserts to do a select query first.
 - Start on searchbar.
 - Fix carousel variable widths.

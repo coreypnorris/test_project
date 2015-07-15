@@ -26,8 +26,8 @@ body {
     }
 
     .home-index-search-row {
-      @include span-columns(9 of 12);
       @include shift(3);
+      @include span-columns(9 of 12);
       text-align: center;
 
       .home-index-search-bar {
@@ -93,8 +93,36 @@ body {
   .comics-new-upload-row {
     @include span-columns(12);
 
-    .comics-new-upload-title-col {
-      @include span-columns(6 of 12);
+    .comics-new-upload-form-label-row {
+      @include span-columns(12);
+
+      .comics-new-title-name-label {
+        @include span-columns(6 of 12);
+      }
+
+      .comics-new-issue-number-label {
+        @include span-columns(2 of 12);
+      }
+
+      .comics-new-issue-pages-label {
+        @include span-columns(4 of 12);
+      }
+    }
+
+    .comics-new-upload-form-row {
+      @include span-columns(12);
+
+      .comics-new-title-name-input {
+        @include span-columns(6 of 12);
+      }
+
+      .comics-new-issue-number-input {
+        @include span-columns(2 of 12);
+      }
+
+      .comics-new-issue-pages-input {
+        @include span-columns(4 of 12);
+      }
     }
   }
 }

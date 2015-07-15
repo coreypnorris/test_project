@@ -7,20 +7,34 @@
   <hr class="comics-new-hr-tag-1">
   <section>
     <div class="comics-new-upload-row well">
-      <form action="/comics/create" method="POST">
-        <div class="comics-new-upload-title-col">
-          <input class="comics-new-title-input form-control" type="text" name="titleName" placeholder="Title:"/>
-        </div>
+      <div class="comics-new-upload-form-label-row">
+        <label class="comics-new-title-name-label control-label" for="titleName">Title Name</label>
+        <label class="comics-new-issue-number-label control-label" for="issueNumber">Issue Number</label>
+        <label class="comics-new-issue-pages-label control-label" for="issuePages">Pages</label>
+      </div>
+      <div class="comics-new-upload-form-row">
+        <form action="/comics/create" method="POST">
+          <input class="comics-new-title-name-input form-control" type="text" name="titleName" placeholder="Action Comics"/>
+          <input class="comics-new-issue-number-input form-control" type="number" name="issueNumber" placeholder="1" min="1" max="9999">
+          <input class="comics-new-issue-pages-input btn btn-default" type="file" name="issuePages" multiple>
+          <input id="input-2" type="file" class="file" multiple="true" data-show-upload="false" data-show-caption="true">
 
-        
-        <br><br><br><br><br><br>
-        <input type="submit" value="Submit">
-      </form>
+          <%# <div class="input-group">
+            <span class="input-group-addon">0</span>
+            <input type="file" class="btn btn-default" name="issuePages" multiple>
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Upload</button>
+            </span>
+          </div>%>
+
+        </form>
+        <br><br><br><br><br><br><br><br><br>
+      </div>
     </div>
   </section>
 </div>
 
-
+<input type="submit" value="Submit">
 
 
 <div class="comics-new-search-row">
