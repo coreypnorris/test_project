@@ -96,32 +96,40 @@ body {
     .comics-new-upload-form-label-row {
       @include span-columns(12);
 
+      .comics-new-issue-pages-label {
+        @include span-columns(2 of 12);
+      }
+
       .comics-new-title-name-label {
-        @include span-columns(6 of 12);
+        @include span-columns(5 of 12);
       }
 
       .comics-new-issue-number-label {
         @include span-columns(2 of 12);
       }
 
-      .comics-new-issue-pages-label {
-        @include span-columns(4 of 12);
+      .comics-new-issue-tags-label {
+        @include span-columns(3 of 12);
       }
     }
 
     .comics-new-upload-form-row {
       @include span-columns(12);
 
+      .comics-new-issue-pages-input {
+        @include span-columns(2 of 12);
+      }
+
       .comics-new-title-name-input {
-        @include span-columns(6 of 12);
+        @include span-columns(5 of 12);
       }
 
       .comics-new-issue-number-input {
         @include span-columns(2 of 12);
       }
 
-      .comics-new-issue-pages-input {
-        @include span-columns(4 of 12);
+      .comics-new-issue-tags-input {
+        @include span-columns(3 of 12);
       }
     }
   }
