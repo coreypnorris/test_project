@@ -41,13 +41,72 @@
   </section>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+<div id="content"></div>
+
+<script type="text/jsx">
+  var CommentBox = React.createClass({
+    render: function() {
+      return (
+        <div className="commentBox">
+          <h1>Comments</h1>
+          <CommentList />
+          <CommentForm />
+        </div>
+      );
+    }
+  });
+
+  var CommentList = React.createClass({
+    render: function() {
+      return (
+        <div className="commentList">
+          Hello, world! I am a CommentList.
+        </div>
+      );
+    }
+  });
+
+  var CommentForm = React.createClass({
+    render: function() {
+      return (
+        <div className="commentForm">
+          Hello, world! I am a CommentForm.
+        </div>
+      );
+    }
+  });
+
+  React.render(
+    <CommentBox />,
+    document.getElementById('content')
+  );
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%# <input type="submit" value="Submit">%>
 
 
 <%# Hidden pages form %>
-<input class="comics-new-issue-pages-preview-input" type="file" name="issuePages" style="display:none;" multiple>
+<%# <input class="comics-new-issue-pages-preview-input" type="file" name="issuePages" style="display:none;" multiple>
 <script>
   $(".comics-new-issue-pages-input").click(function(){
     $(".comics-new-issue-pages-preview-input").click();
   });
-</script>
+</script>%>
