@@ -6,8 +6,9 @@ require('dotenv').load();
 var express = require('express');
 var app = express();
 var fs = require('fs');
+app.set('fs', fs);
 var utilities = require('./utilities.js');
-
+app.set('utilities', utilities);
 
 
 // Environment Configurations
@@ -29,8 +30,6 @@ else if (process.env.ENVIRONMENT == 'prod') {
   console.log("Running in production environment");
 }
 
-
-
 // Database Setup
 var sqlite_interface = require('./db/sqlite_interface.js');
 app.set('sqlite_interface', sqlite_interface);
@@ -38,25 +37,27 @@ var db = sqlite_interface.getDatabase();
 var schema = fs.readFileSync('./schema.sql').toString();
 sqlite_interface.createSchema(db, schema);
 
-
-
 // Routing
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // Home routes
-home = require('./routes/home.js');
+homeRoutes = require('./routes/home.js');
 app.get('/', function(req, res) {
     res.redirect('/home');
 });
-app.get('/home', home.index);
+app.get('/home', homeRoutes.index);
 
-// Comic routes
-comics = require('./routes/comics.js');
-app.get('/comics/new', utilities.basicAuth, comics.new);
-app.post('/comics/create', utilities.basicAuth, comics.create);
-app.get('/comics/edit', utilities.basicAuth, comics.edit);
+// Comics routes
+comicsRoutes = require('./routes/comics.js');
+app.get('/comics/new', utilities.basicAuth, comicsRoutes.new);
+app.post('/comics/create', utilities.basicAuth, comicsRoutes.create);
+app.get('/comics/edit', utilities.basicAuth, comicsRoutes.edit);
+
+// Api routes
+apiRoutes = require('./routes/api.js');
+app.get('/api/comments/', apiRoutes.comments);
 
 
 // Port

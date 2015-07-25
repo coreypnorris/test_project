@@ -1,4 +1,4 @@
-var sass    = require('node-sass');
+var sass = require('node-sass');
 var bourbon = require('node-bourbon');
 
 var initializeSass = function() {
