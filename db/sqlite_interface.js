@@ -15,6 +15,14 @@ var createSchema = function(db, schema) {
   db.close();
 };
 
+var seedDatabase = function(db) {
+  createNewComic(db);
+};
+
+var createNewComic = function(db) {
+  debugger;
+};
+
 var createTitle = function(db, titleName) {
   db.serialize(function() {
     db.run("BEGIN TRANSACTION");
@@ -29,3 +37,4 @@ var createTitle = function(db, titleName) {
 module.exports.getDatabase = getDatabase;
 module.exports.createSchema = createSchema;
 module.exports.createTitle = createTitle;
+module.exports.seedDatabase = seedDatabase;

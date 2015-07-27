@@ -21,7 +21,6 @@ var timeNowInUnix = function() {
 module.exports.initializeSass = initializeSass;
 module.exports.timeNowInUnix = timeNowInUnix;
 
-
 var basicAuth = require('basic-auth');
 exports.basicAuth = function (req, res, next) {
     function unauthorized(res) {

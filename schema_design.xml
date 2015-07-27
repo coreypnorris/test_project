@@ -37,7 +37,7 @@
       <type label="SET" length="1" sql="SET" quote=""/>
       <type label="Bit" length="0" sql="bit" quote=""/>
     </group>
-  </datatypes><table x="555" y="102" name="issues">
+  </datatypes><table x="563" y="101" name="Issues">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -48,18 +48,18 @@
 <part>id</part>
 </key>
 </table>
-<table x="901" y="101" name="pages">
+<table x="906" y="102" name="Pages">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="issue_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
+<row name="image" null="1" autoincrement="0">
+<datatype>BLOB</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="201" y="101" name="titles">
+<table x="211" y="102" name="Titles">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -70,7 +70,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="904" y="353" name="comments">
+<table x="913" y="352" name="comments">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -90,7 +90,7 @@
 <default>NULL</default></row>
 <row name="commentable_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="issues" row="id" />
+<default>NULL</default><relation table="Issues" row="id" />
 <relation table="comments" row="id" />
 </row>
 <row name="comment_id" null="1" autoincrement="0">
@@ -101,11 +101,11 @@
 <part>id</part>
 </key>
 </table>
-<table x="910" y="204" name="tags">
+<table x="912" y="221" name="tags">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="body" null="1" autoincrement="0">
+<row name="name" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
@@ -118,11 +118,11 @@
 <default>NULL</default></row>
 <row name="title_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="titles" row="id" />
+<default>NULL</default><relation table="Titles" row="id" />
 </row>
 <row name="issue_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="issues" row="id" />
+<default>NULL</default><relation table="Issues" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -134,11 +134,11 @@
 <default>NULL</default></row>
 <row name="issue_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="issues" row="id" />
+<default>NULL</default><relation table="Issues" row="id" />
 </row>
 <row name="page_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="pages" row="id" />
+<default>NULL</default><relation table="Pages" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -150,7 +150,7 @@
 <default>NULL</default></row>
 <row name="issue_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="issues" row="id" />
+<default>NULL</default><relation table="Issues" row="id" />
 </row>
 <row name="tag_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
